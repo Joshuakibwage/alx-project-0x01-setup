@@ -1,14 +1,13 @@
 import { UserProps } from "@/interfaces";
 
-
-export default function UserCard({ 
-  name, 
-  email, 
-  phone, 
-  website, 
-  company, 
-  address 
-}: UserProps) {
+const UserCard = ({
+  name,
+  email,
+  phone,
+  website,
+  company,
+  address,
+}: UserProps) => {
   return (
     <div className="p-4 rounded-2xl shadow-md border bg-white">
       <h2 className="text-xl font-bold mb-2">{name}</h2>
@@ -20,4 +19,6 @@ export default function UserCard({
       <p className="text-sm mt-2">📍 {address.city}, {address.street}</p>
     </div>
   );
-}
+};
+
+export default UserCard;
