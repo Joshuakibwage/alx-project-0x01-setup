@@ -1,4 +1,3 @@
-'use client'
 import { UserProps } from "@/interfaces";
 
 
@@ -9,7 +8,7 @@ export default function UserCard({
   website, 
   company, 
   address 
-}): UserProps {
+}: UserProps) {
   return (
     <div className="p-4 rounded-2xl shadow-md border bg-white">
       <h2 className="text-xl font-bold mb-2">{name}</h2>

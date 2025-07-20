@@ -1,4 +1,4 @@
-// import Header from "@/components/layout/Header";
+import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
 import { UserProps } from "@/interfaces";
 
@@ -18,15 +18,21 @@ export async function getStaticProps() {
 }
 
 
-export default function Users({ posts }: UsersPageProps) {
+function Users({ posts }: UsersPageProps) {
   return (
-    <div className="p-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map((user) => (
-        <UserCard 
-            key={user.id} 
-            {...user} 
-        />
-      ))}
-    </div>
+    <>
+    <Header />
+        <div className="p-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map((user) => (
+                <UserCard 
+                    key={user.id} 
+                    {...user} 
+                />
+            ))}
+        </div>
+    </>
   );
 }
+
+
+export default Users;
